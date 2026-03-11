@@ -9,16 +9,16 @@ try {
 	$library = new Library();
 
 	// création des items à afficher
-	$book1 = new Book('1984', 'George Orwell', '1984.jpg', 328);
-	$magazine1 = new Magazine('National Geographic', 'Divers', 'national.webp', 150);
-	$book2 = new Book('La ligne verte', 'Stephen King', 'ligneverte.jpg', 1065);
-	$magazine2 = new Magazine('Ca m\'intéresse', 'Prisma média', 'caminteresse.png', 203);
+	$book1 = new Book('Harry Potter à l\'école des sorciers', 'J. K. Rowling', '1H.webp', 320);
+	$book2 = new Book('Harry Potter et la Chambre des secrets', 'J. K. Rowling', '2H.webp', 368);
+	$book3 = new Book('Harry Potter et le Prisonnier d\'Azkaban', 'J. K. Rowling', '3H.webp', 448);
+	$book4 = new Book('Harry Potter et la Coupe de feu', 'J. K. Rowling', '4H.webp', 736);
 
 	// ajout des items à la librairie
 	$library->addItem($book1);
-	$library->addItem($magazine1);
 	$library->addItem($book2);
-	$library->addItem($magazine2);
+	$library->addItem($book3);
+	$library->addItem($book4);
 
 	// récupération des items pour affichage
 	$items = $library->getItems();
