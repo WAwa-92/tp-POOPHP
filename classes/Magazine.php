@@ -6,7 +6,7 @@ class Magazine extends Item
 {
 	private $issueNumber;
 
-	public function __construct($title, $author, $coverImage, $issueNumber)
+	public function __construct(string $title, string $author, string $coverImage, int $issueNumber)
 	{
 		parent::__construct($title, $author, $coverImage);
 		$this->setIssueNumber($issueNumber);

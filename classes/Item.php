@@ -6,7 +6,7 @@ abstract class Item
     protected $author;
     protected $coverImage;
 
-    public function __construct($title, $author, $coverImage)
+    public function __construct(string $title, string $author, string $coverImage)
     {
         $this->setTitle($title);
         $this->setAuthor($author);

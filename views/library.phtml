@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Library</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Le monde des livres et des magazines — <?= Library::getTotalItems(); ?> articles en stock</h1>
+
+        <section class="grid">
+            <?php foreach ($items as $item) : ?>
+                <article class="card">
+                    <img
+                        src="images/<?= htmlspecialchars($item->getCoverImage()); ?>" 
+                        alt="Couverture de <?= htmlspecialchars($item->getTitle()); ?>"
+                    >
+                    <div class="content">
+                        <h2 class="title"><?= htmlspecialchars($item->getTitle()); ?></h2>
+                        <p class="text">Auteur : <?= htmlspecialchars($item->getAuthor()); ?></p>
+                        <p class="text"><?= htmlspecialchars($item->getInfo()); ?></p>
+                    </div>
+                </article>
+            <?php endforeach; ?>
+        </section>
+    </main>
+</body>
+</html>
